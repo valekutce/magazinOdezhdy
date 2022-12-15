@@ -187,8 +187,8 @@ body {
 
 }
 .container {
-  width: 1100px;
-  max-width: 100%;
+  width: 92%;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -525,6 +525,12 @@ main.main {
   }
 }
 
+@media (max-width: 667px) {
+  .home::before {
+    top: 121px;
+  }
+}
+
 @media (max-width: 425px) {
   .home {
     padding-top: 63px;
@@ -563,6 +569,10 @@ main.main {
   .subtitle {
     font-size: 20px;
     margin-bottom: 60px;
+  }
+  .home .container .btn {
+    margin: initial;
+    margin: auto;
   }
 }
 
@@ -923,7 +933,7 @@ main.main {
     font-size: 160px;
   }
   .topical_item {
-    width: 235px;
+    width: 215px;
   }
 }
 
@@ -936,17 +946,22 @@ main.main {
   }
   .topical h2::before {
     font-size: 80px;
-    right: 58px;
+    right: 22px;
     width: auto;
     top: -31px;
   }
   .topical_items {
-    width: 598px;
+    width: 630px;
     max-width: 100%;
     margin: auto;
   }
   .topical_item {
-    width: 272px;
+    width: 300px;
+    .topical_img {
+      img {
+        width: 100%;
+      }
+    }
   }
   .topical_item:nth-child(odd) {
     display: none;
@@ -1121,6 +1136,7 @@ main.main {
   }
   .contact h2:before {
     top: -25px;
+    left: -26px;
     font-size: 100px;
     letter-spacing: 0px;
   }
@@ -1134,9 +1150,6 @@ main.main {
 }
 
 @media (max-width: 425px) {
-  .contact {
-    padding: 103px 0 0px 0;
-  }
   .contact h2 {
     width: 100%;
     font-size: 50px;
@@ -1152,23 +1165,6 @@ main.main {
   }
   .contact_social {
     display: none;
-  }
-}
-
-@media (max-width: 375px) {
-  .contact h2:before {
-    font-size: 44px;
-  }
-}
-
-@media (max-width: 320px) {
-  .contact h2 {
-    font-size: 30px;
-    line-height: 40px;
-  }
-  .contact h2:before {
-    font-size: 36px;
-    width: 100%;
   }
 }
 
@@ -1250,5 +1246,269 @@ main.main {
 @media (max-width: 425px) {
   .footer {
     padding: 0px 0 29px;
+  }
+}
+
+/* =================== Страница Коллекции ================= */ 
+/* Раздел Коллекции */ 
+
+.main-collection {
+  position: relative;
+  width: 100%;
+  padding: 130px 0 78px;
+  &::before {
+    content: "Коллекции";
+    font-family: "mainTitle";
+    position: absolute;
+    top: 30px;
+    left: 75px;
+    letter-spacing: -11px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 130px;
+    line-height: 113px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--title-shadow);
+    z-index: -1;
+  }
+}
+.main-collection_wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main-collection_tabs {
+  width: 228px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      &:first-child a {
+        padding-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 20px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        padding: 20px 0;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        color: var(--main-color-text);
+        text-decoration: none;
+        span {
+          img {
+            width: 0px;
+            margin-right: 2px;
+            transition: width .3s;
+          }
+        }
+        &:hover img {
+          width: 55px;
+        }
+        &.activ_collection img {
+          width: 55px;
+        }
+      }
+    }
+  }
+}
+
+.main-collection_color {
+  width: 159px;
+  display: flex;
+  justify-content: space-between;
+  a.activ_color img{
+    transform: scale(1.2);
+  }
+}
+.main-collection_cart {
+  width: 864px;
+  max-width: 100%;
+  .topical_items {
+    .topical_item {
+      width: 272px;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+/* Footer */ 
+
+#Collection footer {
+  padding: 40px 0 10px;
+}
+
+@media (max-width: 820px) {
+  .main-collection::before {
+    font-size: 80px;
+    line-height: 70px;
+    left: 13px;
+  }
+  .main-collection_tabs {
+    width: 209px;
+  }
+  .main-collection_cart {
+    width: 475px;
+  }
+  .main-collection_cart .topical_items .topical_item {
+    width: 230px;
+    &:nth-child(odd) {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 667px) {
+  .main-collection_tabs {
+    width: 190px;
+  }
+  .main-collection_cart {
+    width: 410px;
+  }
+  .main-collection_cart .topical_items .topical_item {
+    width: 195px;
+    h3 {
+      font-size: 18px;
+    }
+  }
+  .main-collection_cart .topical_items .topical_prise_cart .prise, .main-collection_cart .topical_items .topical_cart {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-collection_tabs {
+    width: 170px;
+  }
+  .contact {
+    padding: 0px 0 64px 0;
+  }
+  .contact h2:before {
+    top: -38px;
+    font-size: 79px;
+  }
+}
+
+@media (max-width: 454px) {
+  .main-collection::before {
+    font-size: 58px;
+  }
+  .menu-items .menu-item a {
+    font-size: 17px;
+  }
+  .main-collection_tabs ul li a {
+    font-size: 20px;
+  }
+  .main-collection_tabs {
+    width: 206px;
+  }
+  .main-collection_cart {
+    width: 194px;
+  }
+  .contact h2 {
+    width: 100%;
+    font-size: 55px;
+    padding-left: 0px;
+  }
+  .contact h2:before {
+    top: -100px;
+    font-size: 59px;
+  }
+}
+
+@media (max-width: 425px) {
+  .menu-items .menu-item a {
+    font-size: 20px;
+  }
+  .main-collection_tabs {
+    display: none;
+  }
+  .main-collection_cart {
+    width: 100%;
+  }
+  .main-collection_cart .topical_items .topical_item {
+    width: 180px;
+  }
+  .main-collection::before {
+    font-size: 56px;
+    top: 73px;
+  }
+  .main-collection_cart .topical_items .topical_prise_cart .prise, .main-collection_cart .topical_items .topical_cart {
+    font-size: 15px;
+  }
+  .contact {
+    padding: 103px 0 0px 0;
+  }
+  #Collection > .main > .contact {
+    padding: 0px 0 0px 0;
+  }
+  .contact h2 {
+    width: 100%;
+    font-size: 50px;
+    line-height: 50px;
+    padding-left: 0;
+    margin-bottom: 6px;
+  }
+  .contact h2:before {
+    top: -30px;
+    font-size: 50px;
+    width: 420px;
+    line-height: 50px;
+    left: 0;
+  }
+  #Collection footer {
+    padding: 0px 0 29px;
+  }
+}
+
+@media (max-width: 390px) {
+  .main-collection::before {
+    font-size: 50px;
+  }
+  .main-collection_cart .topical_items .topical_item {
+    width: 165px;
+  }
+  .main-collection_cart .topical_items .topical_item h3 {
+    font-size: 17px;
+  }
+  .contact h2:before {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact h2:before {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-collection::before {
+    font-size: 44px;
+  }
+  .contact h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .contact h2:before {
+    font-size: 36px;
+  }
+  .main-collection_cart .topical_items .topical_item {
+    width: 100%;
+  }
+  .main-collection_cart .topical_items .topical_item h3 {
+    font-size: 20px;
+  }
+  .main-collection_cart .topical_items .topical_prise_cart .prise, .main-collection_cart .topical_items .topical_cart {
+    font-size: 20px;
   }
 }
