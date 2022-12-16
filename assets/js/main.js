@@ -11,6 +11,45 @@ $(document).ready(function(){
         dots: true,
     });
 
+    // Слайдер Страница О нас
+
+    $('.about-slider').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 3,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 769,
+              settings: {
+                centerMode: false,
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                centerMode: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+              }
+            }
+          ]
+    });
+
     // Мобильное меню
 
     let burg = document.querySelector('.burg'),
