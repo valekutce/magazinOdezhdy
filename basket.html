@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css/style.css">
+    <title>Страница Корзина</title>
+</head>
+<body id="Basket" class="basket">
+    <main class="main">
+        <header class="header">
+            <div class="container">
+                <div class="header_wrap">
+                    <div class="burg"><span></span><span></span><span></span><span></span></div>
+                    <div class="header_logo"><a href="index.html"><img src="./assets/img/logo/mainLogo.png" alt="Main Logo"></a></div>
+                    <div class="header_menu_wrap">
+                        <nav class="header_menu">
+                            <ul class="menu-items">
+                                <li class="menu-item"><a href="#" class="menu-link">Главная</a></li>
+                                <li class="menu-item"><a href="collection.html" class="menu-link">коллекции</a></li>
+                                <li class="menu-item"><a href="about.html" class="menu-link">О нас</a></li>
+                                <li class="menu-item"><a href="#" class="menu-link">контакты</a></li>
+                                <li class="menu-item"><a href="#" class="menu-link activ">корзина</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header_menu_gender"><a href="#">девушкам</a><a href="#">мужчинам</a><a href="#">унисекс</a></div>
+                    </div>
+                    <div class="header_social"><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Раздел с Корзинной -->
+
+        <section class="section-basket">
+            <div class="container">
+                <div class="section-basket_wrap">
+                    <!-- Блок с выбранным ТОваром -->
+                    <div class="section-basket_products">
+
+                        <div class="basket_product">
+                            <div class="basket_product_img"><img src="./assets/img/cart.png" alt="Фото товара"></div>
+                            <div class="basket_product_info">
+                                <h3>Костюм Advolatum - соцветие</h3>
+                                <div class="basket_info_calc">
+                                    <div>
+                                        <label>
+                                            размер:
+                                            <select name="" id="">
+                                                <option value="l">l</option>
+                                                <option value="M">M</option>
+                                                <option value="X">X</option>
+                                                <option value="Xl">XL</option>
+                                                <option value="XXl">XXL</option>
+                                                <option value="XXXl">XXXL</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            кол-во:
+                                            <div class="calc"><span class="calc-minus">-</span> <input value="1" readonly> <span class="calc-plus">+</span></div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            стоимость:
+                                            <input value="3571 Г" readonly>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="basket_product">
+                            <div class="basket_product_img"><img src="./assets/img/cart.png" alt="Фото товара"></div>
+                            <div class="basket_product_info">
+                                <h3>Костюм Advolatum - соцветие</h3>
+                                <div class="basket_info_calc">
+                                    <div>
+                                        <label>
+                                            размер:
+                                            <select name="" id="">
+                                                <option value="l">l</option>
+                                                <option value="M">M</option>
+                                                <option value="X">X</option>
+                                                <option value="Xl">XL</option>
+                                                <option value="XXl">XXL</option>
+                                                <option value="XXXl">XXXL</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            кол-во:
+                                            <div class="calc"><span class="calc-minus">-</span> <input value="1" readonly> <span class="calc-plus">+</span></div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            стоимость:
+                                            <input value="3571 Г" readonly>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total-block">
+                            <p>
+                                СУММА доставки будет расчитана после ввода
+                                данных о месте назначения - город, улица
+                            </p>
+                            <table class="total-block_table">
+                                <tr>
+                                    <td>доставка:</td>
+                                    <td>500 uhy</td>
+                                </tr>
+                                <tr>
+                                    <td>итого:</td>
+                                    <td>4251 uhy</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="private-data">
+                            <form action="#">
+                                <input type="checkbox" name="private" id="private">
+                                <span class="radio_private_castom"><span></span></span>
+                                <label for="private">Согласие на обработку персональных данных</label>
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- Блок с формой Дданные получателя -->
+                    <div class="section-basket_form">
+                        <h3>Оформление заказа</h3>
+                        <p>Данные получателя</p>
+                        <form action="#" class="form">
+                            <div class="form_wrap">
+                                <div><input type="text" name="surname" placeholder="Фамилия"></div>
+                                <div><input type="text" name="name" placeholder="Имя"></div>
+                                <div><input type="text" name="middlename" placeholder="Отчество"></div>
+                                <div> <label for="telNumma">контактный номер телефона</label> <input type="tel" name="tel" placeholder="+0(  )___ __ __" id="telNumma"></div>
+                                <div> <label for="stadtInput">данные места доставки</label> <input type="text" name="stadt" placeholder="Город" id="stadtInput"></div>
+                                <div><input type="text" name="stadt" placeholder="Улица"></div>
+                                <div><input type="text" name="haus" placeholder="Дом"><input type="text" name="ofis" placeholder="кв/оффис"></div>
+                            </div>
+                
+                            <div class="wrap_check_blocks">
+                                <p>Как вы оплатите:</p>
+                                <div class="wrap_check">
+                                    <div class="block_check"><input type="radio" value="оплата online" name="paymen" id="online" checked><label for="online"> картой</label></div>
+                                    <div class="block_check"><input type="radio" value="наложенным платежом" name="paymen" id="superimposed"> <label for="superimposed"> наложенный</label></div>                                   
+                                    <div class="private-data">
+                                        <form action="#">
+                                            <input type="checkbox" name="private" id="private1">
+                                            <span class="radio_private_castom"><span></span></span>
+                                            <label for="private1">Согласие на обработку персональных данных</label>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="basket_button">
+                    <table class="total-block_table">
+                        <tr>
+                            <td>доставка:</td>
+                            <td>500 uhy</td>
+                        </tr>
+                        <tr>
+                            <td>итого:</td>
+                            <td>4251 uhy</td>
+                        </tr>
+                    </table>
+                    <button class="btn"><img src="./assets/img/iconBtn.svg" alt="icon">Каталог</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer сайта -->
+
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="footer_wrap">
+
+                    <div class="policy">
+                        <p>
+                            политика конфиденциальности <br> согласие на обработку персональных данных
+                        </p>
+                    </div>
+                    <div class="footer_logo">
+                        <a href="#"><img src="./assets/img/logo/mainLogo.png" alt="Main Logo"></a>
+                        <div class="footer_copy">
+                            <span>2022</span><a href="https://stockshablonov.com/">StockShablonov</a>
+                        </div>
+                    </div>
+                    <div class="footer_social"><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+
+                </div>
+            </div>
+        </footer>
+
+
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/85ada5a19f.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
