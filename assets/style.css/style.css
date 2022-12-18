@@ -2642,6 +2642,9 @@ input[type=radio]:checked + label::before {
   .product-home_left-col .product-home_info_year {
     height: 248px;
   }
+  .product-home_left-col .product-home_info_year p {
+    font-size: 65px;
+  }
   .product-home_right-col .product-home_info p {
     margin-top: 48px;
   }
@@ -2658,12 +2661,7 @@ input[type=radio]:checked + label::before {
     margin-bottom: 66px;
   }
 }
-@media (max-width: 750px) {
-  .product-home_left-col .product-home_info_year p {
-    font-size: 65px;
-    color: red;
-  }
-}
+/* xs */
 @media (max-width: 667px) {
   .product-home_right-col, .product-home_left-col {
     width: 49%;
