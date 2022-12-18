@@ -2598,6 +2598,12 @@ input[type="radio"]:checked + label::before {
   }
 }
 
+@media (max-width: 715px) {
+  .product-home_left-col .product-home_info_year p {
+    font-size: 65px;
+  }
+ }
+
 @media (max-width: 667px) {
   .product-home_right-col, .product-home_left-col {
     width: 49%;
