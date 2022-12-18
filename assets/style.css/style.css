@@ -2658,7 +2658,7 @@ input[type=radio]:checked + label::before {
     margin-bottom: 66px;
   }
 }
-@media (max-width: 715px) {
+@media (max-width: 700px) {
   .product-home_left-col .product-home_info_year p {
     font-size: 65px;
   }
