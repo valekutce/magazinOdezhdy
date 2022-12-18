@@ -2598,9 +2598,10 @@ input[type="radio"]:checked + label::before {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 680px) {
   .product-home_left-col .product-home_info_year p {
     font-size: 65px;
+    color: red;
   }
 }
 
