@@ -65,6 +65,9 @@ $(document).ready(function(){
     let topicalItemBack = document.querySelectorAll('.topical_item_back');
     let topicalItemBackContent = document.querySelectorAll('.topical_item_back .back_content');
     let topicalItemBackDescr = document.querySelectorAll('.topical_item_back .back_content p');
+    let backContentMore = document.querySelectorAll('.back_content_more');
+    let cardProduct = document.querySelector('.cardProduct');
+    let cardProductClose = document.querySelector('.cardProduct_close');
 
     for (let i = 0; i < topicalItemWidth.length; i++) {
 
@@ -116,15 +119,25 @@ $(document).ready(function(){
         }
 
     }
+ 
+// Карта Товара
+    backContentMore.forEach((cardClick)=> {
+        cardClick.addEventListener('click', (e)=> {
+            e.preventDefault();
+            cardProduct.classList.add('cardProduct_activ');
+            setTimeout(()=> {
+                cardProductClose.classList.add('cardProduct_close_activ');
+            }, 1000);
+        });
+    });
 
-    // topicalItemWidth.forEach((elem, kay)=> {
-    //     let itemKay = kay + 1;
-    //     if (itemKay == 4) {
-    //         topicalItemBackContent.forEach((item)=> {
-    //             item.style.padding = "20px 20px";
-    //         });
-    //     }
-    // })
+    cardProductClose.addEventListener('click', ()=> {
+        cardProductClose.classList.remove('cardProduct_close_activ');
+        setTimeout(()=> {
+            cardProduct.classList.remove('cardProduct_activ');
+        }, 500);
+    });
+
 
 
   });
