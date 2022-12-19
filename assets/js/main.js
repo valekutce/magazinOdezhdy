@@ -68,6 +68,21 @@ $(document).ready(function(){
 
     for (let i = 0; i < topicalItemWidth.length; i++) {
 
+        if (topicalItemWidth[i].offsetWidth >= 300) {
+
+            topicalItemBackContent.forEach((item)=> {
+                item.style.padding = "50px 20px";
+            });
+            for (let i = 0; i < topicalItemTitle.length; i++) {
+                topicalItemTitle[i].style.display = "block";
+            }
+            topicalItemBackDescr.forEach((parag)=> {
+                parag.style.fontSize = "16px";
+                parag.style.lineHeight = "30px";
+            });
+            
+        }
+
         if (topicalItemWidth[i].offsetWidth == 250) {
 
             topicalItemBackContent.forEach((item)=> {
